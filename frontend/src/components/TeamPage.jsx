@@ -20,11 +20,11 @@ const teamMembers = [
     },
     {
         id: 2,
-        name: "राजेश कुमार",
-        role: "उपाध्यक्ष",
-        location: "गोमती नगर, लखनऊ",
-        phone: "+919876543210",
-        phoneDisplay: "9876543210",
+        name: "दिनेश कुमार दीक्षित",
+        role: "संस्थापक",
+        location: "कमलानगर कमलाबाद बढ़ौली छठामील, लखनऊ",
+        phone: "+919807626031",
+        phoneDisplay: "9807626031",
         image: dinesh,
         experience: "20 वर्ष"
     },
