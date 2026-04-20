@@ -12,7 +12,7 @@ const Navbar2 = () => {
     { id: "home", label: "होम", path: "/", sectionId: "home" },
     { id: "patrakars", label: "पत्रकार", path: "/#patrakars", sectionId: "patrakars" },
     { id: "team", label: "हमारी टीम", path: "/#team", sectionId: "team" },
-    { id: "contact", label: "संपर्क", path: "/#contact", sectionId: "contact" }
+    { id: "contact", label: "संपर्क", path: "/contact", sectionId: "contact" }
   ];
 
   const externalLinks = [

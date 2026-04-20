@@ -12,7 +12,15 @@ import {
   CheckCircle,
   Building,
   Calendar,
-  Globe
+  Globe,
+  Target,
+  HeartHandshake,
+  Scale,
+  Stethoscope,
+  Gavel,
+  Handshake,
+  Clock,
+  BadgeCheck
 } from "lucide-react";
 
 const About = () => {
@@ -24,29 +32,82 @@ const About = () => {
     { value: "15+", label: "वर्षों का अनुभव", icon: Calendar }
   ];
 
-  // Mission points
-  const missionPoints = [
+  // ================= ORGANIZATION OBJECTIVES (8 POINTS) =================
+  const objectives = [
     {
-      icon: Users,
-      title: "एकता",
-      description: "देशभर के पत्रकारों को एक मजबूत और संगठित मंच पर लाना।",
-      color: "bg-red-50",
-      iconColor: "text-red-600"
-    },
-    {
+      id: 1,
+      title: "पत्रकार सुरक्षा एक्ट कानून",
+      description: "पत्रकार सुरक्षा एक्ट कानून को लागू कराना।",
       icon: Shield,
-      title: "सुरक्षा",
-      description: "पत्रकारों के अधिकारों, सुरक्षा और सम्मान की रक्षा करना।",
       color: "bg-red-50",
       iconColor: "text-red-600"
     },
     {
+      id: 2,
+      title: "पेंशन योजना",
+      description: "भारत के सभी पत्रकारों को एकजुट करना एवं पेंशन योजना लागू कराना।",
+      icon: Users,
+      color: "bg-blue-50",
+      iconColor: "text-blue-600"
+    },
+    {
+      id: 3,
+      title: "बीमा सुरक्षा",
+      description: "पत्रकारों को बीमा सुरक्षा व स्वास्थ्य सुविधाएं दिलाने के लिए शासन से मांग करना।",
+      icon: Stethoscope,
+      color: "bg-green-50",
+      iconColor: "text-green-600"
+    },
+    {
+      id: 4,
+      title: "मान सम्मान",
+      description: "पत्रकारों को शासन-प्रशासन द्वारा पूरा मान, सम्मान एवं सुरक्षा प्रदान कराना।",
+      icon: Award,
+      color: "bg-purple-50",
+      iconColor: "text-purple-600"
+    },
+    {
+      id: 5,
+      title: "निष्पक्ष जांच",
+      description: "किसी भी पत्रकार पर बिना जांच-पड़ताल के मुकदमा दर्ज न हो, उच्च अधिकारियों द्वारा जांच कराना।",
+      icon: Scale,
+      color: "bg-orange-50",
+      iconColor: "text-orange-600"
+    },
+    {
+      id: 6,
+      title: "आर्थिक स्थिरता",
+      description: "देश के कोने-कोने में पत्रकारों को संगठित करना और उनकी आर्थिक स्थिति सुधारने के लिए शासन से मांग करना।",
       icon: TrendingUp,
-      title: "विकास",
-      description: "पत्रकारों के सामाजिक और आर्थिक विकास के लिए कार्य करना।",
-      color: "bg-red-50",
-      iconColor: "text-red-600"
+      color: "bg-teal-50",
+      iconColor: "text-teal-600"
+    },
+    {
+      id: 7,
+      title: "त्वरित कार्रवाई",
+      description: "पत्रकारों के साथ किसी भी घटना पर 24 घंटे के अंदर शासन-प्रशासन की सहायता से कार्रवाई कराना।",
+      icon: Clock,
+      color: "bg-rose-50",
+      iconColor: "text-rose-600"
+    },
+    {
+      id: 8,
+      title: "समान सुविधाएं",
+      description: "गैर-मान्यता प्राप्त पत्रकारों को भी वह समस्त सुविधाएं दिलाना जो मान्यता प्राप्त पत्रकारों को दी जाती हैं।",
+      icon: BadgeCheck,
+      color: "bg-indigo-50",
+      iconColor: "text-indigo-600"
     }
+  ];
+
+  // ================= SAN KALP (संकल्प) SECTION CONTENT =================
+  const sankalpContent = [
+    "हम ऑल इंडिया पत्रकार एकता संघ के सदस्य यह दृढ़ संकल्प लेते हैं कि हम बिखराव को समाप्त कर एकता की मशाल जलाएंगे।",
+    "हम व्यक्तिगत स्वार्थ से उपर उठकर संगठन को सर्वोपरि मानेंगे।",
+    "हम पत्रकारों के अधिकारों की सुरक्षा एवं सम्मान की लड़ाई में एकजुट होकर संघर्ष करेंगे।",
+    "हम लोकतंत्र की रक्षा में अपनी कलम को कभी झुकने नहीं देंगे।",
+    "हम पत्रकार आवाज़ हैं, लेकिन संगठित पत्रकार बदलाव की ताकत हैं।",
+    "सत्य के साथ, संगठन के साथ - यही हमारी पहचान है।"
   ];
 
   return (
@@ -54,7 +115,6 @@ const About = () => {
       
       {/* ================= HERO SECTION WITH RED THEME ================= */}
       <section className="relative bg-gradient-to-br from-red-700 via-red-600 to-red-500 text-white overflow-hidden">
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-white rounded-full blur-3xl"></div>
@@ -67,7 +127,7 @@ const About = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            ऑल इंडिया पत्रकार एकता संघ
+            ऑल इंडिया पत्रकार एकता संघ (A.I.P.E.S.)
           </h1>
           
           <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
@@ -78,7 +138,6 @@ const About = () => {
           </p>
         </div>
         
-        {/* Wave Divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-8 md:h-12">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="white"></path>
@@ -87,7 +146,7 @@ const About = () => {
       </section>
 
       {/* ================= STATS SECTION ================= */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className=" hidden py-12 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, idx) => (
@@ -107,7 +166,6 @@ const About = () => {
       <section className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
-          {/* Left Content */}
           <div>
             <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full mb-4">
               <FileText size={14} />
@@ -115,7 +173,7 @@ const About = () => {
             </div>
             
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-              ऑल इंडिया पत्रकार एकता संघ
+              ऑल इंडिया पत्रकार एकता संघ (A.I.P.E.S.) के बारे में
             </h2>
             
             <div className="w-16 h-1 bg-red-500 rounded-full mb-5"></div>
@@ -147,7 +205,6 @@ const About = () => {
             </div>
           </div>
           
-          {/* Right Image */}
           <div className="relative">
             <div className="absolute -top-4 -right-4 w-32 h-32 bg-red-100 rounded-full blur-2xl opacity-60"></div>
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-red-100 rounded-full blur-2xl opacity-60"></div>
@@ -172,10 +229,12 @@ const About = () => {
               पंजीकरण विवरण
             </h2>
             <div className="w-16 h-1 bg-red-500 mx-auto mt-3 rounded-full"></div>
+            <p className="text-gray-500 mt-2 text-sm">
+              भारतीय ट्रस्ट अधिनियम 1882 के अंतर्गत क्रमांक 20/25 दिनांक 3/3/2025 को पंजीकृत
+            </p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto border border-gray-100">
-            {/* Header with Red Gradient */}
             <div className="bg-gradient-to-r from-red-600 to-red-500 px-6 py-4">
               <h3 className="text-white font-bold text-lg flex items-center gap-2">
                 <Building size={20} />
@@ -190,7 +249,7 @@ const About = () => {
                     <FileText size={18} className="text-red-500 mt-0.5" />
                     <div>
                       <p className="text-xs text-gray-400">पंजीकरण अधिनियम</p>
-                      <p className="font-medium text-gray-800">IT Act 1882</p>
+                      <p className="font-medium text-gray-800">IT Act 1882 (भारतीय ट्रस्ट अधिनियम)</p>
                     </div>
                   </div>
                   
@@ -199,6 +258,14 @@ const About = () => {
                     <div>
                       <p className="text-xs text-gray-400">पंजीकरण संख्या</p>
                       <p className="font-medium text-gray-800">4/70-179/226/20/25</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Calendar size={18} className="text-red-500 mt-0.5" />
+                    <div>
+                      <p className="text-xs text-gray-400">पंजीकरण दिनांक</p>
+                      <p className="font-medium text-gray-800">3 मार्च 2025</p>
                     </div>
                   </div>
                   
@@ -235,6 +302,14 @@ const About = () => {
                       <p className="font-medium text-gray-800">allindiapes14@gmail.com</p>
                     </div>
                   </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Award size={18} className="text-red-500 mt-0.5" />
+                    <div>
+                      <p className="text-xs text-gray-400">दर्पण नीति आयोग</p>
+                      <p className="font-medium text-gray-800">भारत सरकार द्वारा पंजीकृत</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -242,60 +317,109 @@ const About = () => {
         </div>
       </section>
 
-      {/* ================= MISSION SECTION ================= */}
+      {/* ================= OBJECTIVES SECTION (8 POINTS) ================= */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-red-100 text-red-600 px-3 py-1 rounded-full mb-3">
-            <Award size={14} />
-            <span className="text-xs font-medium">हमारा उद्देश्य</span>
+            <Target size={14} />
+            <span className="text-xs font-medium">हमारा लक्ष्य</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-            हमारे मूल उद्देश्य
+            संगठन के प्रमुख उद्देश्य
           </h2>
           <div className="w-16 h-1 bg-red-500 mx-auto mt-3 rounded-full"></div>
           <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
-            हम पत्रकार समुदाय के उत्थान और सशक्तिकरण के लिए प्रतिबद्ध हैं
+            हम पत्रकारों के उत्थान और सशक्तिकरण के लिए इन 8 प्रमुख उद्देश्यों पर कार्य कर रहे हैं
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {missionPoints.map((point, idx) => (
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {objectives.map((obj) => (
             <div 
-              key={idx} 
-              className={`${point.color} rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-red-100`}
+              key={obj.id} 
+              className={`${obj.color} rounded-xl p-5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 group`}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-600 rounded-2xl mb-4 shadow-lg">
-                <point.icon className="w-8 h-8 text-white" />
+              <div className="flex items-start gap-3">
+                <div className={`p-2 rounded-lg bg-white shadow-sm ${obj.iconColor}`}>
+                  <obj.icon size={20} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-800 text-sm mb-1">
+                    {obj.id}. {obj.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    {obj.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-bold text-xl text-gray-800 mb-2">{point.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{point.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ================= CALL TO ACTION SECTION ================= */}
+      {/* ================= SAN KALP (संकल्प) SECTION ================= */}
       <section className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 text-white py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-1.5 mb-4">
+              <HeartHandshake size={16} />
+              <span className="text-sm font-medium">हमारा संकल्प</span>
+            </div>
+            <h2 className="text-2xl md:text-4xl font-bold mb-3">
+              दृढ़ संकल्प
+            </h2>
+            <div className="w-20 h-1 bg-yellow-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="space-y-4">
+            {sankalpContent.map((text, index) => (
+              <div 
+                key={index} 
+                className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition"
+              >
+                <div className="flex-shrink-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center mt-0.5">
+                  <span className="text-red-700 text-xs font-bold">{index + 1}</span>
+                </div>
+                <p className="text-white text-sm md:text-base leading-relaxed">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8 pt-4 border-t border-white/20">
+            <p className="text-yellow-300 text-sm font-medium">
+              "सत्य के साथ, संगठन के साथ - यही हमारी पहचान है"
+            </p>
+            <p className="text-red-200 text-xs mt-2">
+              24 घंटे पत्रकारों के लिए तत्पर | Always ready for journalists
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CALL TO ACTION SECTION ================= */}
+      <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="text-4xl mb-4">🤝</div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
             पत्रकार समुदाय से जुड़ें
           </h2>
-          <p className="text-red-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             यदि आप एक पत्रकार हैं और हमारे साथ जुड़ना चाहते हैं, तो आज ही संपर्क करें।
             मिलकर बनाएंगे एक मजबूत पत्रकार समुदाय।
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg inline-flex items-center justify-center gap-2"
+              className="bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition shadow-lg inline-flex items-center justify-center gap-2"
             >
               <Phone size={18} />
               संपर्क करें
             </Link>
             <Link 
               to="/patrakars" 
-              className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition inline-flex items-center justify-center gap-2"
+              className="border-2 border-red-600 text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-red-600 hover:text-white transition inline-flex items-center justify-center gap-2"
             >
               <Users size={18} />
               हमारे पत्रकार देखें
@@ -305,9 +429,12 @@ const About = () => {
       </section>
 
       {/* ================= FOOTER NOTE ================= */}
-      <div className="bg-gray-50 py-4 text-center border-t border-gray-200">
-        <p className="text-xs text-gray-400">
+      <div className="bg-gray-900 py-4 text-center">
+        <p className="text-xs text-gray-500">
           © 2024 ऑल इंडिया पत्रकार एकता संघ | सर्वाधिकार सुरक्षित
+        </p>
+        <p className="text-xs text-gray-600 mt-1">
+          भारतीय ट्रस्ट अधिनियम 1882 के अंतर्गत पंजीकृत | पंजीकरण संख्या: 4/70-179/226/20/25
         </p>
       </div>
 

@@ -29,15 +29,6 @@ export default function HomePage() {
     }
   };
 
-     // ================= MENU ITEMS =================
-  const menuItems = [
-    { id: "home", label: "होम" },
-    { id: "patrakars", label: "पत्रकार" },
-    { id: "team", label: "हमारी टीम" },
-    { id: "contact", label: "संपर्क" }
-  ];
-
-
  
 
   return (
@@ -80,67 +71,6 @@ export default function HomePage() {
          <TeamPage/>
         </div>
       </section>
-
-      {/* ================= CONTACT SECTION ================= */}
-      <section id="contact" className="py-16 max-w-7xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">संपर्क करें</h2>
-          <div className="w-16 h-1 bg-red-500 mx-auto mt-2 rounded-full"></div>
-          <p className="text-gray-500 mt-2">हमसे जुड़ने के लिए संपर्क करें</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Contact Info */}
-          <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="font-bold text-xl mb-4">संपर्क जानकारी</h3>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl"><MapPin/></span>
-                <span>जानकीपुरम, लखनऊ</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl"><Phone/></span>
-                <span>0522,7118207, 9450324690</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-2xl"><Mail/></span>
-                <span>allindiapes14@gmail.com</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Simple Contact Form */}
-          <div className="bg-white rounded-2xl p-6 shadow-md">
-            <h3 className="font-bold text-xl mb-4">सन्देश भेजें</h3>
-            <form className="space-y-4">
-              <input 
-                type="text" 
-                placeholder="आपका नाम"
-                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400"
-              />
-              <input 
-                type="email" 
-                placeholder="ईमेल पता"
-                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400"
-              />
-              <textarea 
-                placeholder="आपका संदेश"
-                rows={3}
-                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400"
-              ></textarea>
-              <button 
-                type="button"
-                className="w-full bg-red-600 text-white py-2 rounded-lg font-semibold hover:bg-red-700 transition"
-              >
-                संदेश भेजें
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= FOOTER ================= */}
-
 
     </div>
   );

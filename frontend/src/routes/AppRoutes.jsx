@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import Patrakars from "../pages/Patrakars";
 import HomePage from "../Test1";
 import FullTeamPage from "../pages/FullTeamPage";
+import ContactPage from "../pages/Contact";
 
 const AppRoutes = () => {
   return (
@@ -16,7 +17,7 @@ const AppRoutes = () => {
           {/* <Route path="/" element={<HomePage />} /> */}
           <Route path="/" element={<HomePage/>} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/patrakars" element={<FullTeamPage />} />
         </Route>
       </Routes>
