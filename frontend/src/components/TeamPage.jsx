@@ -7,48 +7,7 @@ import gulrej from '../assets/gulrej.jpeg'
 import dineshtripathi from '../assets/dineshtripathi.jpeg'
 
 // ================= TEAM MEMBERS DATA =================
-const teamMembers = [
-    {
-        id: 1,
-        name: "के.डी. सिंह",
-        role: "चेयरमैन, राष्ट्रीय अध्यक्ष",
-        location: "बृजनगर कालोनी, जानकीपूरम, लखनऊ",
-        phone: "+919450324690",
-        phoneDisplay: "9450324690",
-        image: kd,
-        experience: "25+ वर्ष"
-    },
-    {
-        id: 2,
-        name: "दिनेश कुमार दीक्षित",
-        role: "संस्थापक",
-        location: "कमलानगर कमलाबाद बढ़ौली छठामील, लखनऊ",
-        phone: "+919807626031",
-        phoneDisplay: "9807626031",
-        image: dinesh,
-        experience: "20 वर्ष"
-    },
-    {
-        id: 3,
-        name: "गुलरेज लारी",
-        role: "राष्ट्रीय उपाध्यक्ष",
-        location: "त्रिवेणी नगर, लखनऊ",
-        phone: "+919628976677",
-        phoneDisplay: "9628976677",
-        image: gulrej,
-        experience: "20 वर्ष"
-    },
-    {
-        id: 4,
-        name: "दिनेश त्रिपाठी",
-        role: "राष्ट्रीय महामंत्री",
-        location: "लखीमपुर खीरी",
-        phone: "+919838018453",
-        phoneDisplay: "9838018453",
-        image: dineshtripathi,
-        experience: "15 वर्ष"
-    }
-];
+import { teamMembers } from "../data/teamData";
 
 // ================= PROFESSIONAL TEAM CARD COMPONENT =================
 const ProfessionalTeamCard = ({ member }) => {
@@ -123,7 +82,7 @@ export default function TeamPage() {
             {/* Team Grid - 4 Cards in a Row */}
             <div className="max-w-7xl mx-auto px-4 py-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {teamMembers.map((member) => (
+                    {teamMembers.slice(0, 4).map((member) => (
                         <ProfessionalTeamCard key={member.id} member={member} />
                     ))}
                 </div>
