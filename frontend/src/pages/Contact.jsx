@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { sendEmail } from "../services/emailService";
 
 // CORRECT IMPORTS - These icons exist in react-icons
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaHeadset, FaShieldAlt, FaUsers, FaPaperPlane, FaMapMarkerAlt, FaClock, FaBuilding } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { IoCall, IoMail, IoTime, IoBusiness, IoGlobe, IoHeart, IoChatbubble, IoC
 
 const ContactPage = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
@@ -17,14 +18,41 @@ const ContactPage = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setFormSubmitted(true);
+  //   setTimeout(() => setFormSubmitted(false), 5000);
+  //   setform({ name: "", email: "", phone: "", subject: "", message: "" });
+  // };
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => setFormSubmitted(false), 5000);
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+
+    // 🔐 Basic validation
+    if (!form.name || !form.email || !form.message) {
+      setStatus("कृपया सभी आवश्यक जानकारी भरें");
+      return;
+    }
+
+    setLoading(true);
+    setStatus("");
+
+    const res = await sendEmail(form);
+
+    if (res.success) {
+      setStatus("संदेश सफलतापूर्वक भेजा गया ✅");
+      setForm({ name: "", email: "", phone: "", message: "", subject:"" });
+    } else {
+      setStatus("संदेश भेजने में समस्या ❌");
+    }
+
+    setLoading(false);
   };
 
   // Contact Information
@@ -45,7 +73,7 @@ const ContactPage = () => {
   // Office Locations
   const officeLocations = [
     { city: "लखनऊ (मुख्यालय)", address: "सेक्टर 8/24, जानकीपुरम विस्तार", phone: "9450324690" },
-    
+
   ];
 
   // Social Media Links
@@ -58,7 +86,7 @@ const ContactPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      
+
       {/* ================= HERO SECTION ================= */}
       <section className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
@@ -93,7 +121,7 @@ const ContactPage = () => {
       {/* ================= MAIN CONTENT ================= */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-10">
-          
+
           {/* LEFT SIDE - Contact Info */}
           <div className="space-y-6">
             {/* Contact Information Card */}
@@ -177,48 +205,48 @@ const ContactPage = () => {
               <FaPaperPlane size={20} className="text-red-600" />
               सन्देश भेजें
             </h2>
-            
+
             {formSubmitted && (
               <div className="bg-green-100 text-green-700 p-3 rounded-lg mb-4 text-sm flex items-center gap-2">
                 <IoCheckmarkCircle size={16} />
                 आपका संदेश सफलतापूर्वक भेज दिया गया है! हम जल्द ही संपर्क करेंगे।
               </div>
             )}
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
-                  value={formData.name}
+                  value={form.name}
                   onChange={handleChange}
                   required
                   placeholder="आपका पूरा नाम *"
                   className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400"
                 />
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
-                  value={formData.email}
+                  value={form.email}
                   onChange={handleChange}
                   required
                   placeholder="ईमेल पता *"
                   className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400"
                 />
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   name="phone"
-                  value={formData.phone}
+                  value={form.phone}
                   onChange={handleChange}
                   placeholder="मोबाइल नंबर"
                   className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400"
                 />
-                <select 
+                <select
                   name="subject"
-                  value={formData.subject}
+                  value={form.subject}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400"
@@ -231,32 +259,38 @@ const ContactPage = () => {
                   <option value="अन्य">अन्य</option>
                 </select>
               </div>
-              
-              <textarea 
+
+              <textarea
                 name="message"
-                value={formData.message}
+                value={form.message}
                 onChange={handleChange}
                 required
                 placeholder="आपका संदेश विस्तार से लिखें *"
                 rows={5}
                 className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400"
               ></textarea>
-              
-              <button 
+
+              <button
                 type="submit"
+                disabled={loading}
                 className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white py-3 rounded-lg font-semibold hover:from-red-700 hover:to-red-600 transition shadow-md flex items-center justify-center gap-2"
               >
                 <MdSend size={18} />
-                संदेश भेजें
+
+                {loading ? "भेजा जा रहा है..." : "संदेश भेजें"}
               </button>
-              
+              {/* Status Message */}
+              {status && (
+                <p className="text-center text-sm text-gray-600">{status}</p>
+              )}
+
               <p className="text-xs text-gray-400 text-center">
                 * हम आपके संदेश का 24 घंटे के भीतर जवाब देंगे।
               </p>
             </form>
           </div>
         </div>
-        
+
         {/* Emergency Contact Banner */}
         <div className="mt-10 bg-gradient-to-r from-red-600 to-red-500 rounded-2xl p-5 text-center text-white">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -273,7 +307,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Back to Home Button */}
       <div className="text-center pb-10">
         <Link to="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-red-600 transition">
