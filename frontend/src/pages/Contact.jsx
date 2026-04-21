@@ -6,9 +6,11 @@ import { sendEmail } from "../services/emailService";
 import { FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaHeadset, FaShieldAlt, FaUsers, FaPaperPlane, FaMapMarkerAlt, FaClock, FaBuilding } from "react-icons/fa";
 import { MdSend, MdLocationOn } from "react-icons/md";
 import { IoCall, IoMail, IoTime, IoBusiness, IoGlobe, IoHeart, IoChatbubble, IoCheckmarkCircle, IoArrowBack } from "react-icons/io5";
+import { useToast } from '../hooks/useToast';
 
 const ContactPage = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const { showSuccess, showError, showInfo, showWarning } = useToast();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -37,9 +39,9 @@ const ContactPage = () => {
     // 🔐 Basic validation
     if (!form.name || !form.email || !form.message) {
       setStatus("कृपया सभी आवश्यक जानकारी भरें");
+      showError("कृपया सभी आवश्यक जानकारी भरें", { type: "error" });
       return;
     }
-
     setLoading(true);
     setStatus("");
 
@@ -47,11 +49,12 @@ const ContactPage = () => {
 
     if (res.success) {
       setStatus("संदेश सफलतापूर्वक भेजा गया ✅");
-      setForm({ name: "", email: "", phone: "", message: "", subject:"" });
+      showSuccess("संदेश सफलतापूर्वक भेजा गया!", { type: "success" });
+      setForm({ name: "", email: "", phone: "", message: "", subject: "" });
     } else {
       setStatus("संदेश भेजने में समस्या ❌");
+      showError("संदेश भेजने में समस्या हुई। कृपया बाद में पुनः प्रयास करें।", { type: "error" });
     }
-
     setLoading(false);
   };
 
