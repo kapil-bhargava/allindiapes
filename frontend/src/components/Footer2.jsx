@@ -22,10 +22,10 @@ const Footer2 = () => {
   };
 
   const menuItems = [
-    { id: "home", label: "होम" },
-    { id: "patrakars", label: "पत्रकार" },
-    { id: "team", label: "हमारी टीम" },
-    { id: "contact", label: "संपर्क" }
+    { id: "home", label: "होम", path: "/" },
+    { id: "sadasya", label: "सदस्य", path: "/team" },
+    { id: "sampark", label: "संपर्क", path: "/contact" },
+    { id: "about", label: "हमारे बारे में", path: "/about" }
   ];
 
   // Social Media Links
@@ -58,7 +58,7 @@ const Footer2 = () => {
   const contactInfo = [
     { icon: FaPhone, text: "+91-522-7118207", link: "tel:+915227118207" },
     { icon: FaEnvelope, text: "allindiapes14@gmail.com", link: "mailto:allindiapes14@gmail.com" },
-    { icon: FaMapMarkerAlt, text: "सेक्टर 8/24, जानकीपुरम विस्तार, लखनऊ", link: "#" },
+    { icon: FaMapMarkerAlt, text: "सेक्टर 8/24, जानकीपुरम विस्तार, लखनऊ", link: "https://www.google.com/maps/place/24,+Sector+8,+Jankipuram+Vistar,+Khargapur+Jagir,+Lucknow,+Uttar+Pradesh+226031/@26.9384486,80.9320013,1005m/data=!3m1!1e3!4m6!3m5!1s0x399956fae26c0679:0x6621dab0ce8e05b6!8m2!3d26.9384438!4d80.9345762!16s%2Fg%2F11qmpm8s04?entry=ttu&g_ep=EgoyMDI2MDQxOS4wIKXMDSoASAFQAw%3D%3D" },
   ];
 
   return (
@@ -70,6 +70,7 @@ const Footer2 = () => {
 
         {/* Main Footer Grid - 5 Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 pb-10 border-b border-gray-800">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 pb-10 border-b border-gray-800"> */}
 
           {/* Column 1: Logo & About */}
           <div className="text-center lg:text-left">
@@ -100,18 +101,18 @@ const Footer2 = () => {
           <div className="text-center lg:text-left">
             <h3 className="text-white font-semibold text-base md:text-lg mb-4 relative inline-block lg:inline-block">
               त्वरित लिंक
-              <span className="absolute -bottom-2 left-0 w-10 h-0.5 bg-red-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-10 h-0.5 bg-red-500 rounded-full lg:left-0 left-1/2 transform lg:transform-none -translate-x-1/2 lg:translate-x-0"></span>
             </h3>
-            <ul className="space-y-3 mt-4">
+            <ul className="space-y-3 mt-4 flex flex-col items-center lg:items-start">
               {menuItems.map((item, idx) => (
                 <li key={idx}>
-                  <button
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-gray-400 hover:text-red-500 transition duration-200 text-sm md:text-base flex items-center gap-2 mx-auto lg:mx-0"
+                  <Link
+                    to={item.path}
+                    className="text-gray-400 hover:text-red-500 transition duration-200 text-sm md:text-base flex items-center gap-2 mx-auto lg:mx-0 justify-center lg:justify-start"
                   >
                     <FaArrowRight size={10} className="text-red-500" />
                     {item.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -123,7 +124,7 @@ const Footer2 = () => {
               उपयोगी लिंक
               <span className="absolute -bottom-2 left-0 w-10 h-0.5 bg-red-500 rounded-full"></span>
             </h3>
-            <ul className="space-y-3 mt-4">
+            <ul className="space-y-3 mt-4 ">
               {usefulLinks.map((link, idx) => (
                 <li key={idx}>
                   <Link
@@ -148,6 +149,7 @@ const Footer2 = () => {
               {contactInfo.map((info, idx) => (
                 <li key={idx}>
                   <a
+                    target='_blank'
                     href={info.link}
                     className="text-gray-400 hover:text-red-500 transition duration-200 text-sm md:text-base flex items-center justify-center lg:justify-start gap-3"
                   >
@@ -209,7 +211,7 @@ const Footer2 = () => {
                 >
                   <FaWhatsapp className='text-green-600 hover:text-white' size={20} />
                 </a>
-                
+
                 <FaPhone className='-scale-x-100' size={12} />
                 {developer.mobileDisplay}
               </a>

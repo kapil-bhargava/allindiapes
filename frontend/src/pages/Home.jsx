@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 
 
 // ================= MAIN HOME PAGE COMPONENT =================
-export default function HomePage() {
+export default function HomePage2() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);

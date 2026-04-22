@@ -14,6 +14,7 @@ import kd from './assets/kd.jpeg'
 import TeamPage from "./components/TeamPage";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import HeroSection from "./components/HeroSection";
 
 export default function HomePage() {
   // State for active menu and mobile menu
@@ -38,7 +39,7 @@ export default function HomePage() {
 
 
       {/* ================= HOME SECTION ================= */}
-      <section id="home" className="bg-gradient-to-r from-red-600 to-red-500 text-white">
+      {/* <section id="home" className="bg-gradient-to-r from-red-600 to-red-500 text-white">
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-28 text-center">
           <h1 className="md:text-6xl font-bold text-4xl">
             ऑल इंडिया पत्रकार एकता संघ ( A.I.P.E.S.)
@@ -50,14 +51,16 @@ export default function HomePage() {
             देश की आवाज़, आपका भरोसा। सटीक, त्वरित और निष्पक्ष पत्रकारिता।
           </p>
           <Link
-            to="/patrakars"
+            to="/team"
             // onClick={() => scrollToSection("patrakars")}
             className="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
           >
             हमारे सदस्य देखें →
           </Link>
         </div>
-      </section>
+      </section> */}
+      <HeroSection />
+
 
 
       {/* ================= OUR TEAM SECTION - PORTRAIT CARDS ================= */}

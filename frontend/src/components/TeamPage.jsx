@@ -90,7 +90,7 @@ export default function TeamPage() {
                 {/* View All Patrakars Button */}
                 <div className="text-center mt-12">
                     <Link
-                        to="/patrakars"
+                        to="/team"
                         className="inline-flex items-center gap-2 border-2 border-red-500 text-red-600 px-8 py-3 rounded-full font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg group"
                     >
                         <span>सभी सदस्य देखें</span>
