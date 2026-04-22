@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { MdSecurity, MdPrivacyTip, MdHelpOutline, MdBusinessCenter } from 'react-icons/md';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 const Footer2 = () => {
   const [, setActiveMenu] = useState("home");
@@ -125,13 +126,13 @@ const Footer2 = () => {
             <ul className="space-y-3 mt-4">
               {usefulLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="text-gray-400 hover:text-red-500 transition duration-200 text-sm md:text-base flex items-center justify-center lg:justify-start gap-2"
                   >
                     <link.icon size={14} className="text-red-500" />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
