@@ -11,7 +11,7 @@ const Navbar2 = () => {
   const menuItems = [
     { id: "home", label: "होम", path: "/", sectionId: "home" },
     // { id: "patrakars", label: "पत्रकार", path: "/#patrakars", sectionId: "patrakars" },
-    { id: "team", label: "हमारी टीम", path: "/#team", sectionId: "team" },
+    { id: "team", label: "सदस्य", path: "/patrakars", sectionId: "team" },
     { id: "contact", label: "संपर्क", path: "/contact", sectionId: "contact" }
   ];
 
