@@ -260,14 +260,14 @@ export default function FullTeamPage() {
       {/* Page Header */}
       <div className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-3">हमारी पूरी टीम</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-3">राष्ट्रीय पदाधिकारी व सदस्य</h1>
           <div className="w-20 h-1 bg-yellow-400 mx-auto rounded-full mb-4"></div>
           <p className="text-red-100 max-w-2xl mx-auto">
             ऑल इंडिया पत्रकार एकता संघ के सभी पदाधिकारी एवं सदस्य
           </p>
-          <p className="text-red-200 text-sm mt-2">
+          {/* <p className="text-red-200 text-sm mt-2">
             कुल सदस्य: {teamMembers.length} | पूरे भारत में सक्रिय
-          </p>
+          </p> */}
         </div>
       </div>
 

@@ -93,7 +93,7 @@ export default function TeamPage() {
                         to="/patrakars"
                         className="inline-flex items-center gap-2 border-2 border-red-500 text-red-600 px-8 py-3 rounded-full font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg group"
                     >
-                        <span>सभी पत्रकार देखें</span>
+                        <span>सभी सदस्य देखें</span>
                         <span className="group-hover:translate-x-1 transition">→</span>
                     </Link>
                 </div>

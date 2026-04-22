@@ -7,6 +7,7 @@ import { FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaYoutube, 
 import { MdSend, MdLocationOn } from "react-icons/md";
 import { IoCall, IoMail, IoTime, IoBusiness, IoGlobe, IoHeart, IoChatbubble, IoCheckmarkCircle, IoArrowBack } from "react-icons/io5";
 import { useToast } from '../hooks/useToast';
+import { FaXTwitter } from "react-icons/fa6";  // For X logo
 
 const ContactPage = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -81,10 +82,10 @@ const ContactPage = () => {
 
   // Social Media Links
   const socialLinks = [
-    { icon: FaFacebook, name: "Facebook", url: "https://facebook.com/allindiapes", color: "hover:text-blue-600" },
-    { icon: FaTwitter, name: "Twitter", url: "https://twitter.com/allindiapes", color: "hover:text-sky-500" },
+    { icon: FaFacebook, name: "Facebook", url: "https://www.facebook.com/share/14bg9jjCJHv/", color: "hover:text-blue-600" },
+    { icon: FaXTwitter, name: "Twitter", url: "https://x.com/Kdsingh19569040", color: "hover:text-black" },
     { icon: FaInstagram, name: "Instagram", url: "https://instagram.com/allindiapes", color: "hover:text-pink-600" },
-    { icon: FaYoutube, name: "YouTube", url: "https://youtube.com/@allindiapes", color: "hover:text-red-600" }
+    { icon: FaYoutube, name: "YouTube", url: "https://www.youtube.com/@kdsingh4433", color: "hover:text-red-600" }
   ];
 
   return (

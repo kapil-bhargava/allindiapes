@@ -428,16 +428,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* ================= FOOTER NOTE ================= */}
-      <div className="bg-gray-900 py-4 text-center">
-        <p className="text-xs text-gray-500">
-          © 2024 ऑल इंडिया पत्रकार एकता संघ | सर्वाधिकार सुरक्षित
-        </p>
-        <p className="text-xs text-gray-600 mt-1">
-          भारतीय ट्रस्ट अधिनियम 1882 के अंतर्गत पंजीकृत | पंजीकरण संख्या: 4/70-179/226/20/25
-        </p>
-      </div>
-
     </div>
   );
 };
