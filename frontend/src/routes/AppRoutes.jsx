@@ -12,6 +12,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsConditions from "../pages/TermsConditions";
 import HelpCenter from "../pages/HelpCenter";
 import HomePage2 from "../pages/Home";
+import NotFoundPage from "../pages/NotFound";
 
 const AppRoutes = () => {
   return (
@@ -27,7 +28,7 @@ const AppRoutes = () => {
             <Route path="/terms" element={<TermsConditions />} />
             <Route path="/help" element={<HelpCenter />} />
             <Route path="/home2" element={<HomePage2 />} />
-            <Route path="*" element={<h1 className="text-center">Not Found</h1>} /> {/* Fallback to Not Found page for unknown routes */}
+            <Route path="*" element={<NotFoundPage />} /> {/* Fallback to Not Found page for unknown routes */}
           </Route>
 
         </Routes>

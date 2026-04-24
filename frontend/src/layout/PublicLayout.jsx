@@ -7,11 +7,11 @@ import Navbar2 from "../components/Navbar2";
 const PublicLayout = () => {
   return (
     <>
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <main className="min-h-screen">
         <Outlet />
       </main>
-      <Footer2 />
+      {/* <Footer2 /> */}
     </>
   );
 };

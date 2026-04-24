@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/aipeslogo.jpeg'
 
 const Logo = () => {
         // State for active menu and mobile menu
