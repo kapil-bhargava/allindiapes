@@ -58,7 +58,7 @@ const NotFoundPage = () => {
               <a href="tel:+919565017342" className="flex items-center gap-1 text-sm text-red-600">
                 <Phone size={14} /> 9565017342
               </a>
-              <a href="mailto:kapil@allindiapes.com" className="flex items-center gap-1 text-sm text-red-600">
+              <a href="mailto:kapil.twoscience@gmail.com" className="flex items-center gap-1 text-sm text-red-600">
                 <Mail size={14} /> Email
               </a>
             </div>

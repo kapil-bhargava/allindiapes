@@ -20,7 +20,8 @@ const AppRoutes = () => {
       <ToastProvider>
         <Routes>
           <Route element={<PublicLayout />}>
-            <Route path="/" element={<HomePage />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
+            <Route path="/" element={<NotFoundPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/team" element={<FullTeamPage />} />
