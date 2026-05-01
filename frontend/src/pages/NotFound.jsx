@@ -68,7 +68,7 @@ const NotFoundPage = () => {
           <Link
             to="/"
             className="block text-center bg-red-600 text-white py-2.5 rounded-lg font-medium hover:bg-red-700 transition"
-          >
+          > 
             ← होम पेज पर जाएं
           </Link>
         </div>
