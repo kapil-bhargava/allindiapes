@@ -13,11 +13,13 @@ import TermsConditions from "../pages/TermsConditions";
 import HelpCenter from "../pages/HelpCenter";
 import HomePage2 from "../pages/Home";
 import NotFoundPage from "../pages/NotFound";
+import ScrollToTop from "../components/ScrollToTop";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <ToastProvider>
+        <ScrollToTop/>
         <Routes>
           <Route element={<PublicLayout />}>
             <Route path="/" element={<HomePage />} />

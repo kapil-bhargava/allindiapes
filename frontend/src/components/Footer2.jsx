@@ -49,8 +49,8 @@ const Footer2 = () => {
   // Useful Links
   const usefulLinks = [
     { name: "हमारे बारे में", icon: MdBusinessCenter, path: "/about" },
-    { name: "गोपनीयता नीति", icon: MdPrivacyTip, path: "/privacy" },
-    { name: "नियम एवं शर्तें", icon: MdSecurity, path: "/terms" },
+    // { name: "गोपनीयता नीति", icon: MdPrivacyTip, path: "/privacy" },
+    // { name: "नियम एवं शर्तें", icon: MdSecurity, path: "/terms" },
     { name: "सहायता केंद्र", icon: MdHelpOutline, path: "/help" },
   ];
 
