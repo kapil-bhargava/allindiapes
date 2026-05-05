@@ -18,6 +18,7 @@ import gurjeet from "../assets/gurujeet.jpeg";
 import ajay from "../assets/ajaykumar.jpeg";
 import daulat from "../assets/daulat.jpeg";
 import vivek from "../assets/vivek.jpeg";
+import santosh from "../assets/santosh.jpeg";
 
 // ================= TEAM DATA =================
 export const teamMembers = [
@@ -200,6 +201,18 @@ export const teamMembers = [
     phone: "+919120059782",
     phoneDisplay: "+91-9120059782",
     image: ajay,
+    experience: "10+ वर्ष",
+
+  },
+  
+  {
+    id: 18,
+    name: "श्री संतोष मिश्रा ",
+    role: "जिला अध्यक्ष ",
+    location: "गोंडा, उत्तर प्रदेश",
+    phone: "+916351512061",
+    phoneDisplay: "+91-6351512061",
+    image: santosh,
     experience: "10+ वर्ष",
 
   },

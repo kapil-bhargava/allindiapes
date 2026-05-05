@@ -15,6 +15,7 @@ import TeamPage from "./components/TeamPage";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
+import ActivitiesPreview from "./components/ActivitiesPreview";
 
 export default function HomePage() {
   // State for active menu and mobile menu
@@ -74,6 +75,8 @@ export default function HomePage() {
 
           {/* Team cards  */}
           <TeamPage />
+
+          {/* <ActivitiesPreview/> */}
         </div>
       </section>
 
