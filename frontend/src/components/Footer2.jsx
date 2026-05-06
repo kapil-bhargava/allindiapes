@@ -225,7 +225,7 @@ const Footer2 = () => {
                   className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition text-sm md:text-base"
                 >
                   <FaUser size={12} />
-                  {developer.name}
+                  Portfolio
                 </a>
               ) : null}
             </div>
