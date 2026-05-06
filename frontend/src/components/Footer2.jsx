@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { FaXTwitter } from "react-icons/fa6";  // For X logo
+import { FaUser, FaXTwitter } from "react-icons/fa6";  // For X logo
 import {
   FaFacebook, FaWhatsapp, FaTwitter, FaInstagram, FaYoutube,
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaHeart,
@@ -43,7 +43,8 @@ const Footer2 = () => {
     mobile: "+919565017342",
     mobileDisplay: "9565017342",
     role: "डेवलपर",
-    roleEn: "Developer"
+    roleEn: "Developer",
+    portfolio: "https://kapilkb.vercel.app/" // Optional: Link to developer's portfolio or profile
   };
 
   // Useful Links
@@ -199,22 +200,34 @@ const Footer2 = () => {
                 <FaCode size={14} className="text-red-500" />
                 <span className="text-white text-sm md:text-base font-medium">{developer.name}</span>
               </div>
+           
               <a
+                href={`https://wa.me/${developer.mobile}?text=नमस्ते%20${encodeURIComponent(developer.nameEn)},%20मैं%20आपसे%20ऑल%20इंडिया%20पत्रकार%20एकता%20संघ%20वेबसाइट%20के%20बारे%20में%20बात%20करना%20चाहता/चाहती%20हूँ।`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
+              >
+                <FaWhatsapp className='text-green-600 hover:text-white' size={20} />
+              </a>
+
+                 <a
                 href={`tel:${developer.mobile}`}
                 className="inline-flex items-center gap-2 text-green-500 hover:text-green-400 transition text-sm md:text-base"
               >
-                <a
-                  href={`https://wa.me/${developer.mobile}?text=नमस्ते%20${encodeURIComponent(developer.nameEn)},%20मैं%20आपसे%20ऑल%20इंडिया%20पत्रकार%20एकता%20संघ%20वेबसाइट%20के%20बारे%20में%20बात%20करना%20चाहता/चाहती%20हूँ।`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
-                >
-                  <FaWhatsapp className='text-green-600 hover:text-white' size={20} />
-                </a>
-
                 <FaPhone className='-scale-x-100' size={12} />
                 {developer.mobileDisplay}
               </a>
+              {developer.portfolio ? (
+                <a
+                  href={developer.portfolio}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition text-sm md:text-base"
+                >
+                  <FaUser size={12} />
+                  {developer.name}
+                </a>
+              ) : null}
             </div>
           </div>
         </div>
