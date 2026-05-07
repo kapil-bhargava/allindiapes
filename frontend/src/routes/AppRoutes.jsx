@@ -27,12 +27,11 @@ const AppRoutes = () => {
             {/* <Route path="/" element={<NotFoundPage />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/team" element={<FullTeamPage />} />
+            <Route path="/members" element={<FullTeamPage />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsConditions />} />
             <Route path="/help" element={<HelpCenter />} />
             <Route path="/activities" element={<Activities />} />
-            <Route path="/home2" element={<HomePage2 />} />
             <Route path="*" element={<NotFoundPage />} /> {/* Fallback to Not Found page for unknown routes */}
           </Route>
 

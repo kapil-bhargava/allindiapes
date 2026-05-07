@@ -8,7 +8,7 @@ const Navbar2 = () => {
 
   const menuItems = [
     { id: "home", label: "होम", path: "/" },
-    { id: "sadasya", label: "सदस्य", path: "/team" },
+    { id: "sadasya", label: "सदस्य", path: "/members" },
     { id: "sampark", label: "संपर्क", path: "/contact" },
     { id: "about", label: "हमारे बारे में", path: "/about" }
   ];
