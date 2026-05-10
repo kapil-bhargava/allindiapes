@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import ActivitiesPreview from "./components/ActivitiesPreview";
 
-export default function HomePage() {
+export default function HomePage5() {
   // State for active menu and mobile menu
   const [activeMenu, setActiveMenu] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

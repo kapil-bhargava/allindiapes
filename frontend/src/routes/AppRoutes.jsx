@@ -4,7 +4,6 @@ import PublicLayout from "../layout/PublicLayout";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Patrakars from "../pages/Patrakars";
-import HomePage from "../Test1";
 import FullTeamPage from "../pages/FullTeamPage";
 import ContactPage from "../pages/Contact";
 import { ToastProvider } from "../context/ToastContext";
@@ -16,6 +15,8 @@ import NotFoundPage from "../pages/NotFound";
 import ScrollToTop from "../components/ScrollToTop";
 import Activities from "../components/Activities";
 import ActivitiesPreview from "../components/ActivitiesPreview";
+import HomePage5 from "../Test1";
+import HomePage from "../pages/Home";
 
 const AppRoutes = () => {
   return (
