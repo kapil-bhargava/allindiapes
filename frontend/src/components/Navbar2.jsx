@@ -10,7 +10,8 @@ const Navbar2 = () => {
     { id: "home", label: "होम", path: "/" },
     { id: "sadasya", label: "सदस्य", path: "/members" },
     { id: "sampark", label: "संपर्क", path: "/contact" },
-    { id: "about", label: "हमारे बारे में", path: "/about" }
+    { id: "about", label: "हमारे बारे में", path: "/about" },
+    { id: "activities", label: "गतिविधियां", path: "/activities" }
   ];
 
   const isActive = (path) => {
@@ -41,11 +42,10 @@ const Navbar2 = () => {
                 key={item.id}
                 to={item.path}
                 onClick={handleNavClick}
-                className={`px-3 py-2 rounded-lg font-medium transition-all duration-200 ${
-                  isActive(item.path)
+                className={`px-3 py-2 rounded-lg font-medium transition-all duration-200 ${isActive(item.path)
                     ? "text-red-600 border-b-2 border-red-600"
                     : "text-gray-600 hover:text-red-500 hover:bg-red-50"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
@@ -69,11 +69,10 @@ const Navbar2 = () => {
                 key={item.id}
                 to={item.path}
                 onClick={handleNavClick}
-                className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition ${
-                  isActive(item.path)
+                className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition ${isActive(item.path)
                     ? "bg-red-50 text-red-600"
                     : "text-gray-600 hover:bg-gray-50"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>

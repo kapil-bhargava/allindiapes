@@ -15,6 +15,7 @@ import HomePage2 from "../pages/Home";
 import NotFoundPage from "../pages/NotFound";
 import ScrollToTop from "../components/ScrollToTop";
 import Activities from "../components/Activities";
+import ActivitiesPreview from "../components/ActivitiesPreview";
 
 const AppRoutes = () => {
   return (
@@ -32,6 +33,7 @@ const AppRoutes = () => {
             <Route path="/terms" element={<TermsConditions />} />
             <Route path="/help" element={<HelpCenter />} />
             <Route path="/activities" element={<Activities />} />
+            {/* <Route path="/activities" element={<ActivitiesPreview  />} /> */}
             <Route path="*" element={<NotFoundPage />} /> {/* Fallback to Not Found page for unknown routes */}
           </Route>
 
