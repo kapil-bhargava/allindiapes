@@ -29,7 +29,7 @@ const ActivitiesPreview = () => {
           {previewActivities.map((activity) => (
             <div
               key={activity.id}
-              className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+              className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
             // onClick={() => navigate(`/activities/${activity.id}`)}
             >
               {/* Image */}

@@ -51,7 +51,7 @@ const HelpCenter = () => {
   // Support Options
   const supportOptions = [
     { icon: FaPhone, title: "फोन सहायता", description: "सुबह 10:00 से शाम 6:00 बजे तक", contact: "+91-522-7118207", link: "tel:+915227118207", color: "bg-green-500" },
-    { icon: FaWhatsapp, title: "व्हाट्सएप", description: "24x7 संदेश भेजें", contact: "9565017342", link: "https://wa.me/919565017342", color: "bg-green-600" },
+    { icon: FaWhatsapp, title: "व्हाट्सएप", description: "24x7 संदेश भेजें", contact: "9450324690", link: "https://wa.me/919450324690", color: "bg-green-600" },
     { icon: FaEnvelope, title: "ईमेल सहायता", description: "24x7 ईमेल सपोर्ट", contact: "allindiapes14@gmail.com", link: "mailto:allindiapes14@gmail.com", color: "bg-blue-500" }
   ];
 
@@ -146,15 +146,15 @@ const HelpCenter = () => {
               </h2>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="text-gray-600">सोमवार - शुक्रवार</span>
-                  <span className="font-medium text-gray-800">सुबह 10:00 - शाम 6:00</span>
+                  <span className="text-gray-600">मंगलवार  - रविवार</span>
+                  <span className="font-medium text-gray-800">सुबह 10:00 - शाम 6:30</span>
                 </div>
-                <div className="flex justify-between py-2 border-b border-gray-100">
+                {/* <div className="flex justify-between py-2 border-b border-gray-100">
                   <span className="text-gray-600">शनिवार</span>
                   <span className="font-medium text-gray-800">सुबह 10:00 - दोपहर 2:00</span>
-                </div>
+                </div> */}
                 <div className="flex justify-between py-2">
-                  <span className="text-gray-600">रविवार</span>
+                  <span className="text-gray-600">सोमवार </span>
                   <span className="font-medium text-gray-400">बंद</span>
                 </div>
               </div>

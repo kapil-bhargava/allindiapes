@@ -17,6 +17,7 @@ const ContactPage = () => {
     email: "",
     phone: "",
     subject: "",
+    address: "",
     message: ""
   });
 
@@ -64,7 +65,7 @@ const ContactPage = () => {
     { icon: IoBusiness, title: "मुख्य कार्यालय", details: "सेक्टर 8/24, जानकीपुरम विस्तार, लखनऊ - 226021", color: "text-red-600" },
     { icon: IoCall, title: "फोन नंबर", details: "+91-522-7118207, +91-9450324690", link: "tel:+915227118207", color: "text-green-600" },
     { icon: IoMail, title: "ईमेल पता", details: "allindiapes14@gmail.com", link: "mailto:allindiapes14@gmail.com", color: "text-blue-600" },
-    { icon: IoTime, title: "कार्यालय समय", details: "सोमवार - शनिवार, सुबह 10:00 - शाम 6:00", color: "text-orange-600" }
+    { icon: IoTime, title: "कार्यालय समय", details: "मंगलवार - रविवार, सुबह 10:00 - शाम 6:30", color: "text-orange-600" }
   ];
 
   // Support Cards
@@ -263,6 +264,14 @@ const ContactPage = () => {
                   <option value="अन्य">अन्य</option>
                 </select>
               </div>
+                <input
+                  type="tel"
+                  name="address"
+                  value={form.address}
+                  onChange={handleChange}
+                  placeholder="पता (वैकल्पिक)"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400"
+                />
 
               <textarea
                 name="message"

@@ -235,7 +235,7 @@ const Footer2 = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
           <p className="text-gray-500 text-xs sm:text-sm text-left">
-            © 2024 ऑल इंडिया पत्रकार एकता संघ | सर्वाधिकार सुरक्षित <br />
+            © 2025 ऑल इंडिया पत्रकार एकता संघ | सर्वाधिकार सुरक्षित <br />
             भारतीय ट्रस्ट अधिनियम 1882 के अंतर्गत पंजीकृत | पंजीकरण संख्या: 4/70-179/226/20/25
           </p>
           <div className="flex items-center gap-1 text-gray-500 text-xs sm:text-sm">

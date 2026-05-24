@@ -7,7 +7,7 @@ export const sendEmail = async (data) => {
       import.meta.env.VITE_EMAIL_TEMPLATE_ID,
       data,
       import.meta.env.VITE_EMAIL_PUBLIC_KEY
-    );
+    );  
 
     return { success: true };
   } catch (err) {
