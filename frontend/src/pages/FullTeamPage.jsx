@@ -200,7 +200,7 @@ const ProfessionalTeamCard = ({ member }) => {
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-72 object-cover object-top group-hover:scale-105 transition duration-500"
+          className={`w-full h-72 object-cover object-top group-hover:scale-105 transition duration-500 ${member.id === 10 ? 'blur-xl' : ''}`}
         />
 
         {/* Experience Badge (Optional - commented out as in original) */}

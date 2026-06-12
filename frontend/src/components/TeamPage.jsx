@@ -22,15 +22,12 @@ const ProfessionalTeamCard = ({ member }) => {
                 <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-72 object-cover object-top group-hover:scale-105 transition duration-500"
+                    className={`w-full h-72 object-cover object-top group-hover:scale-105 transition duration-500 ${member.id === 10 ? 'rounded-2xl' : ''}`}
                 />
 
                 {/* Experience Badge */}
                 <div className="absolute top-3 right-3">
-                    {/* <div className="flex items-center gap-1 bg-red-600/95 backdrop-blur-sm text-white px-3 py-1.5 rounded-full shadow-lg">
-            <Briefcase size={12} className="text-yellow-300" />
-            <span className="text-xs font-semibold">{member.experience}</span>
-          </div> */}
+                   
                 </div>
 
                 {/* Semi-transparent Overlay for Name */}
