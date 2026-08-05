@@ -7,9 +7,15 @@ import pic6 from "../assets/activities/pic6.jpeg";
 import pic7 from "../assets/activities/pic7.jpeg";
 import pic8 from "../assets/activities/pic8.jpeg";
 import pic9 from "../assets/activities/pic9.jpeg";
-// import pic10 from "../assets/activities/pic10.jpeg";
-// import pic11 from "../assets/activities/pic11.jpeg";
-// import pic12 from "../assets/activities/pic12.jpeg";
+import pic10 from "../assets/activities/pic10.jpeg";
+import pic11 from "../assets/activities/pic11.jpeg";
+import pic12 from "../assets/activities/pic12.jpeg";
+import pic13 from "../assets/activities/pic13.jpeg";
+import pic14 from "../assets/activities/pic14.jpeg";
+import pic15 from "../assets/activities/pic15.jpeg";
+import pic16 from "../assets/activities/pic16.jpeg";
+import pic17 from "../assets/activities/pic17.jpeg";
+import pic18 from "../assets/activities/pic18.jpeg";
 import { Calendar } from "lucide-react";
 const activitiesData = [
   {
@@ -120,6 +126,115 @@ const activitiesData = [
     likes: 45,
     location: "हैदराबाद, तेलंगाना"
   },
+  {
+    id: 10,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic10,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 11,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic11,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 12,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic12,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 13,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic13,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 14,
+    title: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",  
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic14,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 15,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic15,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740, 
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 16,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic16,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 17,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic17,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  },
+  {
+    id: 18,
+    // title: "साइबर सुरक्षा प्रशिक्षण कार्यक्रम",
+    description: "लखनऊ मेयर सुषमा खर्कवाल से मुलाकात करते राष्ट्रीय विधिक सलाहकार विशाल कुमार सिंह एडवोकेट",
+    image: pic18,
+    date: "2024-01-28",
+    category: "प्रशिक्षण",
+    readTime: 6,
+    views: 740,
+    likes: 45,
+    location: "हैदराबाद, तेलंगाना"
+  }
+
 ];
 
 export default activitiesData;
